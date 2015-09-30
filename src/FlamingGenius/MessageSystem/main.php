@@ -23,26 +23,31 @@ class main extends PluginBase{
   
   if(strtolower($cmd) == "broadcast"){
    $this->getServer()->broadcastMessage("§4[Broadcast]§6" . " " . $msg);
+   return true;
   }
 
   elseif(strtolower($cmd) == "bgod"){
    $this->getServer()->broadcastMessage("§b[GOD]§6" . " " . $msg);
   }
 
-  elseif(strtolower($cmd) == "bhero"){
-   $this->getServer()->broadcastMessage("§a[HEROBRINE§6" . " " . $msg);
+  if(strtolower($cmd) == "bhero"){
+   $this->getServer()->broadcastMessage("§a[HEROBRINE]§6" . " " . $msg);
+   return true;
   }
 
-  elseif(strtolower($cmd) == "announce"){
+  if(strtolower($cmd) == "announce"){
    $this->getServer()->broadcastMessage("§e[Announce]§6" . " " . $msg);
+   return true;
   }
 
-  elseif(strtolower($cmd) == "server"){
+  if(strtolower($cmd) == "server"){
    $this->getServer()->broadcastMessage("§l§f[Server]§6" . " " . $msg);
+   return true;
   }
 
-  elseif(strtolower($cmd) == "console"){
+  if(strtolower($cmd) == "console"){
    $this->getServer()->broadcastMessage("§8[Console]§8" . " " . $msg);
+   return true;
   }
 
 
@@ -53,3 +58,4 @@ class main extends PluginBase{
 }
 
 ?>
+
